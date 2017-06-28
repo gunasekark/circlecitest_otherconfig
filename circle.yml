@@ -7,9 +7,9 @@ dependencies:
   pre:
     - openssl aes-256-cbc -d -in config-cipher -k $KEY >> configaws
     - npm install
-    - add-apt-repository ppa:ubuntu-toolchain-r/test  
-    - apt-get update  
-    - apt-get install g++-4.8  
+    - sudo add-apt-repository ppa:ubuntu-toolchain-r/test  
+    - sudo apt-get update  
+    - sudo apt-get install g++-4.8  
 compile:
   override:
      - echo 'hello world'
