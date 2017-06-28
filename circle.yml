@@ -27,7 +27,7 @@ deployment:
        - |
           export AWS_CONFIG_FILE=${HOME}/${CIRCLE_PROJECT_REPONAME}/configaws
           echo $AWS_CONFIG_FILE
-          aws --debug s3 sync ~/circlecitest_awsconfig/dist s3://s3awscddev3 --delete --profile devprofile
+          aws --debug s3 sync ${HOME}/${CIRCLE_PROJECT_REPONAME}/dist s3://s3awscddev3 --delete --profile devprofile
 test:
   override:
      - python nosetest.py
