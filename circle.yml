@@ -1,6 +1,8 @@
 machine:
   node:
     version: 5.10.1
+  environment:
+    CXX: g++-4.8
 dependencies:
   pre:
     - openssl aes-256-cbc -d -in config-cipher -k $KEY >> configaws
@@ -8,8 +10,6 @@ dependencies:
     - add-apt-repository ppa:ubuntu-toolchain-r/test  
     - apt-get update  
     - apt-get install g++-4.8  
-      environment:
-          CXX: g++-4.8
 compile:
   override:
      - echo 'hello world'
