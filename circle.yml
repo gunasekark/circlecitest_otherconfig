@@ -19,7 +19,7 @@ compile:
 deployment:
   branch: dev
   commands:
-       - cat ~/circlecitest_awsconfig/configaws
+       - cat ${HOME}/${CIRCLE_PROJECT_REPONAME}/configaws
        - |
           export AWS_CONFIG_FILE=${HOME}/${CIRCLE_PROJECT_REPONAME}/configaws
           echo $AWS_CONFIG_FILE
